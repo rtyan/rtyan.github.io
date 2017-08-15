@@ -51,3 +51,78 @@ categories: git
 ```
 只有`what`分支的最新提交信息，`git diff FETCH_HEAD`之后也会显示区别问D1，因为这样`FETCH_HEAD`
 指针指向了`what`分支的最新提交的定点。
+
+#### git中的diff
+git 中的diff分为以下几种情况：
+```sh
+git diff;
+git diff --staged;
+git diff --cached;
+git diff HEAD
+```
+要理解这几个之间的区别，首先要了解git的几个工作区。
+git中文件所处的状态可以分为3中：工作区、暂存区、提交版本。
+git中为什么要改这么多的状态，`add`之后还要一次`commit`才能提交到版本库，这个是
+因为git期初没有界面，添加一个暂存区，就类似于svn的GUI选择提交界面。更形象的表示
+就是，暂存区就像一个购物车，想要的东西都放进去，最后付款的可能不是全部商品。
+
+##### git diff
+`git diff`是工作区和暂存区之间的比较，看下面的例子：
+
+1. 修改文件A，添加一行内容`test a file`，然后`git add A`，此时文件A进入暂存区。
+2. 再次修改文件A，添加一行内容`test two file`，此时运行`git status`，结果如下。
+```
+➜  tmp git:(master) ✗ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   readme.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   readme.md
+```
+3. 运行`git diff`，可以看到你内容如下，可以看到工作区确实比暂存区多了一行
+`test two file`
+```
+diff --git a/readme.md b/readme.md
+index 2708cc2..871c1b7 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1,2 +1,3 @@
+ ### test
+ test a file
++test two file
+```
+
+##### git diff --staged | git diff --cached
+这两个命令是同一个意思，都是比较暂存区和提交版本的比较，就像上面那几个步骤，之后
+执行`git diff --staged`或者`git diff --cached`，返回结果如下，可以看到，确实比
+提交版本库多了一行`test a file`。
+```
+diff --git a/readme.md b/readme.md
+index 071da0e..2708cc2 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1 +1,2 @@
+ ### test
++test a file
+```
+
+#####  git diff HEAD
+这里适合制定版本比较，HEAD指向的数本地提交版本库的定点，所以沿着上面的例子，
+继续执行`git diff HEAD`,不出意外，可以看到下面的结果，多加了两行内容：`test
+ a file`和`test two file`：
+```
+diff --git a/readme.md b/readme.md
+index 071da0e..871c1b7 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1 +1,3 @@
+ ### test
++test a file
++test two file
+```
