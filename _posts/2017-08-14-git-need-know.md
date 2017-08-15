@@ -69,8 +69,9 @@ git中为什么要改这么多的状态，`add`之后还要一次`commit`才能�
 ##### git diff
 `git diff`是工作区和暂存区之间的比较，看下面的例子：
 
-1. 修改文件A，添加一行内容`test a file`，然后`git add A`，此时文件A进入暂存区。
-2. 再次修改文件A，添加一行内容`test two file`，此时运行`git status`，结果如下。
+修改文件A，添加一行内容`test a file`，然后`git add A`，此时文件A进入暂存区。
+
+再次修改文件A，添加一行内容`test two file`，此时运行`git status`，结果如下。
 
 ```
 ➜  tmp git:(master) ✗ git status
@@ -87,7 +88,7 @@ Changes not staged for commit:
 	modified:   readme.md
 ```
 
-3. 运行`git diff`，可以看到你内容如下，可以看到工作区确实比暂存区多了一行
+运行`git diff`，可以看到你内容如下，可以看到工作区确实比暂存区多了一行
 `test two file`
 
 ```
