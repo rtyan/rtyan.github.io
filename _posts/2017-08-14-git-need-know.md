@@ -10,6 +10,32 @@ categories: git
 这时候就可以使用`git stash`命令，将正在开发的内容暂存起来(就像警察处理案件时候的保留
 现场)，去开发修复bug，等bug提交之后再将功能A的现场恢复出来继续开发，就好像什么也没发生
 过。看看下面的例子
+```
+# 修改一点儿文件
+git stash save "测试一下stash，添加一行内容"
+# 修改一点儿文件
+git stash save "测试一下stash，完善404页面"
+
+
+# 查看所有stash
+git stash list
+
+stash@{0}: On master: 测试一下stash，完善404页面
+stash@{1}: On master: 测试一下stash，添加一行内容
+
+# 恢复现场，下面的命令将第一次保存的现场恢复出来
+git stash apply stash@{0}
+
+# 删除一个保存的现场
+git stash drop stash@{0}
+
+# 上面两个命令等同于下面一个命令，下面的命令直接恢复现场，并删除栈中的现场记录 
+git stash pop stash@{0}
+
+# 弹出最近一次添加的现场
+git stash pop
+```
+当然了，`git stash`还是栈不要太深，容易搞混自己，太深了还是建议新建分支。
 
 #### GIT中的fetch
 或许大多数人跟我一样经常使用`git pull`，很少使用`git fetch`，可能也搞不清楚这两个到底有啥区别。
