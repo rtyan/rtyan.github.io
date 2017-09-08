@@ -34,3 +34,5 @@ categories: 翻译
 周期中Python相对于其他5中主流语言的增长（注意，因此相对于追溯到2008年的趋势工具，这
 儿是相对短的时间范围）。这儿有Stack Overflow中发达国家最高访问标签10个中的6个，其他
 4个没包含的是CSS, HTML, Android, and JQuery。
+
+![主流语言的增长]({{ site.url }}/assets/images/posts/growth-of-major-language.png)
