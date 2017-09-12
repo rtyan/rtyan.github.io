@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  疯狂发展的Python
-date:   2017-09-07 13:19:02
+date:   2017-09-11 22:19:02
 categories: 翻译
 ---
 #### 原文信息
