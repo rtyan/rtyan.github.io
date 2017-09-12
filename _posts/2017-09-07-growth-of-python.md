@@ -6,7 +6,7 @@ categories: 翻译
 ---
 #### 原文信息
 
->原文地址： (https://stackoverflow.blog/2017/09/06/incredible-growth-python/)[https://stackoverflow.blog/2017/09/06/incredible-growth-python/]
+>原文地址： [https://stackoverflow.blog/2017/09/06/incredible-growth-python/](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 
 >原文作者：by David Robinson
 
