@@ -33,7 +33,30 @@ categories: 工具
 
 #### 半自动化法
 沿着上面的思路，我可以生成多套`ssh keys`，然后将他们管理起来，每次使用的时候
-只需要将他们替换到`id_rsa`、`id_rsa.pub`就可以了，省略了人工去切换。
+只需要将他们替换到`id_rsa`、`id_rsa.pub`就可以了，省略了人工去切换。就像下面
+这样：
+```shell
+➜  rtyan.github.io git:(master) git push origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+➜  rtyan.github.io git:(master) sshkeys change rtyan
+切换ssh keys对，从[aizuyan]到[rtyan]...
+复制/Users/ritoyan/.ssh-keys-pair/rtyan到/Users/ritoyan/.ssh/id_rsa成功
+复制/Users/ritoyan/.ssh-keys-pair/rtyan.pub到/Users/ritoyan/.ssh/id_rsa.pub成功
+切换到rtyan成功
+➜  rtyan.github.io git:(master) git push origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 77.54 KiB | 0 bytes/s, done.
+Total 8 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:rtyan/rtyan.github.io.git
+   a05e55f..50b54a7  master -> master
+```
 
 目前已经开发完成，用shell完成的，最后面会将代码贴出来。
 
