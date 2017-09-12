@@ -5,11 +5,14 @@ date:   2017-09-11 22:19:02
 categories: 翻译
 ---
 #### 原文信息
-原文地址： (https://stackoverflow.blog/2017/09/06/incredible-growth-python/)[https://stackoverflow.blog/2017/09/06/incredible-growth-python/]
 
-原文作者：by David Robinson
+>原文地址： (https://stackoverflow.blog/2017/09/06/incredible-growth-python/)[https://stackoverflow.blog/2017/09/06/incredible-growth-python/]
 
-原文发布时间：September 6, 2017
+>原文作者：by David Robinson
+
+>原文发布时间：September 6, 2017
+
+>翻译时间：2017-09-08 ~ 2017年09月12 晚上、中午抽空翻译
 
 我们最近在探索发达国家（可以理解为高收入）相对其他国家如何倾向于不同的技术。我们
 发现最大的不同在于编程语言Python。当我们聚焦于发达国家的时候，Python的增长甚至
