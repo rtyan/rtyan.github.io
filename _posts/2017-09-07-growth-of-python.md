@@ -4,7 +4,12 @@ title:  疯狂发展的Python
 date:   2017-09-11 22:19:02
 categories: 翻译
 ---
-#### 原文信息
+
+由于Python是人工智能、机器学习的标配，现在成了最热门的语言。 StackOverflow 发现，
+Python 是该网站2017年增长最快的标签，并且还在快速增长之中。
+
+上面这段话无意中在[ruanyf老师](https://weibo.com/ruanyf)的[微博](https://m.weibo.cn/status/4149277154417684)
+上看到的，找到原文，顺便翻译了下
 
 >原文地址： [https://stackoverflow.blog/2017/09/06/incredible-growth-python/](https://stackoverflow.blog/2017/09/06/incredible-growth-python/)
 
