@@ -1,0 +1,14 @@
+{
+  "name": "blog-vendor",
+  "version": "1.0.0",
+  "description": "npm安装的插件放在这里",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
