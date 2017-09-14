@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 拾碎
+author: 燕睿涛
 subtitle: 知识拾碎
 email: ritoyan@163.com
 description: 燕睿涛的Blog
