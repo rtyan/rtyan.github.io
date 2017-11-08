@@ -22,7 +22,6 @@ CSS定位，一个看似简单却又很难得问题，说他简单是因为大�
 对元素定位，这个偏移是以元素原本的位置为参考的。
 
 [点击查看](http://en.jsrun.net/fPiKp/edit)relative定位的例子
-<script async src="//en.jsrun.net/fPiKp/embed/all/light/"></script>
 
 #### absolute 绝对定位
 `position: absolute`，文档脱离文档流，并删除元素占用的文档流，此时可以使用`left: 20px; top:100px`
