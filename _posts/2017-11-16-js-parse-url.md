@@ -93,3 +93,13 @@ function getParams(parser, name)
 	}
 }
 ```
+
+看看下面的例子
+
+```js
+var urlInfo = parser("http://example.com:3000/pathname/?who=you&name=&yrt&search=test#hash");
+console.log(urlInfo.host);	// output example.com:3000
+console.log(getParams(urlInfo));	//output {who: "you", name: "", yrt: undefined, search: "test"}
+console.log(getParams(urlInfo, "yrt"));	// output null
+```
+
